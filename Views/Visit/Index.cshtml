@@ -1,0 +1,23 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<Visit>;
+
+<h2 class="text-center">Places must visit in India</h2>
+
+<img src="https://static.euronews.com/articles/stories/05/36/83/90/1440x810_cmsv2_6187d843-7037-5073-92f1-c3a894a93ba2-5368390.jpg" class="img-fluid rounded shadow img-2 mb-5 mx-5 my-5" alt="..." />
+
+<div class="row">
+@foreach (var v in Model){
+    <div class="col-md-4">
+      <div class="card mx-5 my-5 card-wid" style="width: 23rem;">
+        <img src=@v.visitPic class="card-img-top" alt="...">
+          <div class="card-body">
+           <h5 class="card-title text-center text-dark">@v.visitPlace</h5>
+                    <p class="card-text h-75 text-dark">@v.visitDesc</p>
+           <a href="#" class="btn btn-primary col-12">Visit</a>
+          </div>
+      </div>
+    </div>
+}
+</div>
