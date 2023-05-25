@@ -1,0 +1,16 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Visit;
+
+<div class="container text-black">
+    <div class="card mb-3">
+        <img class="card-img-top img-3" src="@Model.visitPic" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">@Model.visitPlace</h5>
+            <p class="card-text">@Model.visitDesc</p>
+        </div>
+    </div>
+</div>

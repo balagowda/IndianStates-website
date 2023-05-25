@@ -26,13 +26,14 @@ namespace Assignment.Models
                     v.visitDesc = dr[3].ToString();
                     VisitData.Add(v);
                 }
-                return VisitData;
+                
             }
             catch (Exception ex)
             {
-                return VisitData;
+                Console.WriteLine(ex.Message);
             }
             finally { conn.Close(); }
+            return VisitData;
         }
     }
 }

@@ -26,13 +26,14 @@ namespace Assignment.Models
                     s.stateLanguage = dr[3].ToString();
                     StatesData.Add(s);
                 }
-                return StatesData;
+                
             }
             catch (Exception ex)
             {
-                return StatesData;
+                Console.WriteLine(ex.Message);
             }
-            finally { conn.Close(); }   
+            finally { conn.Close(); }
+            return StatesData;
         }
     }
 }

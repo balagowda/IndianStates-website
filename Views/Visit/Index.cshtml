@@ -15,9 +15,16 @@
           <div class="card-body">
            <h5 class="card-title text-center text-dark">@v.visitPlace</h5>
                     <p class="card-text h-75 text-dark">@v.visitDesc</p>
-           <a href="#" class="btn btn-primary col-12">Visit</a>
+                    <form action="@Url.Action("ViewDetails", "Visit")" method="post">
+                        <input type="hidden" name="pic" value="@v.visitPic" />
+                        <input type="hidden" name="place" value="@v.visitPlace" />
+                        <input type="hidden" name="desc" value="@v.visitDesc" />
+                        <button type="submit" class="btn btn-primary col-12">More</button>
+                    </form>
           </div>
       </div>
     </div>
 }
 </div>
+
+/*pic = v.visitPic,place = v.visitPlace, desc = v.visitDesc */
